@@ -1,0 +1,57 @@
+<h1 x-large class="sample-content">Add vehicle</h1>
+<div class="alert alert-danger" role="alert" *ngIf="error">
+  <strong>Error!</strong> {{ error }}
+</div>
+<div class="alert alert-success" role="alert" *ngIf="info">
+  <strong>Data correct!</strong> {{ info }}
+</div>
+<form>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="licensePlate">License plate</label>
+        <input type="text" class="form-control" [(ngModel)]="newVehicle.licensePlate" name="licensePlate"
+               id="licensePlate" aria-describedby="licensePlate" placeholder="example... WE123456">
+        <small id="emailHelp" class="form-text text-muted">Only license plate can be added to the parking.</small>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <fieldset class="form-group">
+        <label>Vehicle type</label>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" [(ngModel)]="newVehicle.type" name="type" name="optionsRadios"
+                   id="car" value="car" checked>
+            Car
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" [(ngModel)]="newVehicle.type" name="type" id="motorbike"
+                   value="motorbike">
+            Motorbike
+          </label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-sm-3">
+      <fieldset class="form-group">
+        <label>Parking levels</label>
+        <div class="form-check" *ngFor="let level of dataService.levels">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" [(ngModel)]="newVehicle.level" name="levels" [id]="level.id"
+                   [value]="level.id">
+            Level {{ level.id }} ({{ level.availableSlots }})
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="addVehicle()"
+          [disabled]="!newVehicle.licensePlate || !newVehicle.type || !newVehicle.level">Add vehicle
+  </button>
+</form>
+<hr>
+Preview:
+<pre>{{ newVehicle | json }}</pre>

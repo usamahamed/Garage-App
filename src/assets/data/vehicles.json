@@ -1,0 +1,242 @@
+[
+  {
+    "licensePlate": "WE41121",
+    "type": "car",
+    "slot": 23,
+    "level": 1
+  },
+  {
+    "licensePlate": "KR31121",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 2
+  },
+  {
+    "licensePlate": "PE1167",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "WE411234",
+    "type": "car",
+    "slot": 23,
+    "level": 3
+  },
+  {
+    "licensePlate": "KR323421",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 3
+  },
+  {
+    "licensePlate": "PE123467",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 4
+  },
+    {
+    "licensePlate": "PE1167",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "WE4112334",
+    "type": "car",
+    "slot": 23,
+    "level": 1
+  },
+  {
+    "licensePlate": "KR324421",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 4
+  },
+  {
+    "licensePlate": "PE123367",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 3
+  },
+  {
+    "licensePlate": "MX12122",
+    "type": "car",
+    "slot": 22,
+    "level": 4
+  },
+  {
+    "licensePlate": "BW32222",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 4
+  },
+  {
+    "licensePlate": "WE23232",
+    "type": "car",
+    "slot": 23,
+    "level": 4
+  },
+  {
+    "licensePlate": "XO20202",
+    "type": "car",
+    "slot": 23,
+    "level": 1
+  },
+  {
+    "licensePlate": "WE23232",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 1
+  },
+  {
+    "licensePlate": "XE23232",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 1
+  },
+    {
+    "licensePlate": "XC23232",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "SD23232",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "SD23232",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 2
+  },
+  {
+    "licensePlate": "XC23232",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 3
+  },
+{
+    "licensePlate": "KJ92929",
+    "type": "car",
+    "slot": 23,
+    "level": 1
+  },
+  {
+    "licensePlate": "TR2828",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 2
+  },
+  {
+    "licensePlate": "VS92828",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "BV27272",
+    "type": "car",
+    "slot": 23,
+    "level": 3
+  },
+  {
+    "licensePlate": "NS82828",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 3
+  },
+  {
+    "licensePlate": "RE72727",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 4
+  },
+    {
+    "licensePlate": "NB82828",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "EW88282",
+    "type": "car",
+    "slot": 23,
+    "level": 1
+  },
+  {
+    "licensePlate": "NB27272",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 4
+  },
+  {
+    "licensePlate": "NS72727",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 3
+  },
+  {
+    "licensePlate": "VC2272",
+    "type": "car",
+    "slot": 22,
+    "level": 4
+  },
+  {
+    "licensePlate": "NB7272",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 4
+  },
+  {
+    "licensePlate": "NW62622",
+    "type": "car",
+    "slot": 23,
+    "level": 4
+  },
+  {
+    "licensePlate": "AO92922",
+    "type": "car",
+    "slot": 23,
+    "level": 1
+  },
+  {
+    "licensePlate": "BV8282",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 1
+  },
+  {
+    "licensePlate": "MY7272",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 1
+  },
+    {
+    "licensePlate": "NE6262",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "LO9292",
+    "type": "car",
+    "slot": 23,
+    "level": 2
+  },
+  {
+    "licensePlate": "BW7272",
+    "type": "motorbike",
+    "slot": 10,
+    "level": 2
+  },
+  {
+    "licensePlate": "MY2288",
+    "type": "motorbike",
+    "slot": 23,
+    "level": 3
+  }
+]

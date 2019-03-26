@@ -1,0 +1,93 @@
+<div class="card-container">
+
+  <div class="row">
+    <div class="col-sm-3">
+       <div class="card-search">
+      <div class="search">
+        <i class="material-icons">search</i>
+        <input type="search" name="search"  [(ngModel)]="phrase">
+      </div>
+    </div>
+
+<!--       <input type="text" [(ngModel)]="phrase">
+ -->      <hr>
+      <h1 class="sample-content">Levels</h1>
+
+      <ul class="list-group">
+        <li class="list-group-item" [ngClass]="level.id === selectedId ? 'active' : 'none'"  (click)="filterByLevel(level.id)"
+        *ngFor="let level of dataService.levels">
+          <span class="tag tag-default tag-pill float-xs-right">{{ level.availableSlots }}</span>
+         Level {{ level.id }}
+        </li>
+
+      </ul>
+      <hr>
+      <h1  class="sample-content">Type</h1>
+
+      <ul class="list-group">
+        <li class="list-group-item" [ngClass]="type === SelectedType ? 'active' : 'none'"
+        (click)="filterByType(type)"
+        *ngFor="let type of dataService.vehicles | unique: 'type'">
+         {{ type }}
+        </li>
+      </ul>
+
+    </div>
+    <div class="offset-sm-1 col-sm-8">
+<!--       <h1 x-large class="sample-content">Vehicles</h1>
+ -->       <div id="vehicle-section-header">
+
+            <div>
+              <div class="pagination-top">
+                <sup class="from">{{this.dataService.currentPage}}</sup>
+                <sub class="to">{{this.dataService.noOfPages}}</sub> <span class="splitter">/</span>
+                <span class="total">{{10 || 0 }}</span> <span class="title">Vehicles</span>
+                <a  [class.disabled]="this.dataService.currentPage == 1"  ><i class="fa fa-angle-up" (click)="clickup()" aria-hidden="true"  ></i></a>
+                <a  [class.disabled]="this.dataService.currentPage == this.dataService.noOfPages" ><i class="fa fa-angle-down" (click)="clickdown()" aria-hidden="true"  ></i></a>
+                <a class="reset" title="reset"><i class="fa fa-dot-circle-o icon" (click)="removeFilter()" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+      <div class="list-container" *ngIf="dataService.slicevehicles ">
+       
+        <ul class="list-vehicle" *ngFor="let vehicle of dataService.slicevehicles | slice:0:dataService.maxSize | search: phrase:'licensePlate'">
+          <li class="list-vehicle-item">
+             <p>
+            {{ vehicle.licensePlate}}
+          </p>
+          <p>
+            {{ vehicle.type}}
+          </p>
+          </li>
+         <li class="list-vehicle-item align-right">
+           <p>
+            Slot: {{ vehicle.slot}}
+          </p>
+          <p>
+            Level: {{ vehicle.level}}
+          </p>
+         </li>
+          
+          <!-- <span>
+            <a href="#" (click)="removeFromParking1(vehicle)">Remove</a>
+          </span> -->
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <hr>
+Preview:
+<div class="row">
+  <div class="col-sm-6">Vehicles:
+    <pre>  {{ dataService.vehicles | json }} </pre>
+  </div>
+  <div class="col-sm-6">Levels:
+    <pre>  {{ dataService.levels | json }} </pre>
+  </div>
+</div> -->
+
