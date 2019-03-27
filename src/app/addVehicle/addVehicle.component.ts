@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+
 import {DataService} from "../services/data.service";
 import {Vehicle} from "../models/vehicle.model";
 import {Level} from "../models/level.model";
@@ -17,13 +18,9 @@ export class addVehicleComponent {
 
   constructor(private dataService: DataService) {
     this.newVehicle = new Vehicle;
-    //for testing
-    // this.newVehicle.licensePlate = "123";
-    // this.newVehicle.type = "car";
-    // this.newVehicle.level = 1;
   }
 
-  addVehicle() {
+  addVehicle(): void {
     this.error = false;
     this.info = null;
     if (this.validation()) {
@@ -71,24 +68,5 @@ export class addVehicleComponent {
   getRandomPlace(availableSlots: number): number {
     let slot = Math.floor(Math.random() * availableSlots);
     return slot;
-    // let allVehiclesFromThisLevel: Array<Vehicle> = this.dataService.vehicles.filter(data =>
-    //   this.newVehicle.level == data.level
-    // );
-    //
-    // console.log("allVehiclesFromThisLevel", allVehiclesFromThisLevel);
-    //
-    // console.log(slot, availableSlots);
-    // allVehiclesFromThisLevel = allVehiclesFromThisLevel.filter(data =>
-    //   data.slot == slot
-    // );
-    //
-    // console.log("allVehiclesFromThisLevel", allVehiclesFromThisLevel);
-    // if (allVehiclesFromThisLevel.length > 0) {
-    //   // return this.getRandomPlace(availableSlots);
-    // }
-    // else {
-    //   return slot;
-    // }
-
   }
 }

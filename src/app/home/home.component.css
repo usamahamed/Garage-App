@@ -8,7 +8,9 @@
 }
 
 /*styles for home content only*/
-
+.pagination-top{
+   margin-left: 2rem;
+}
 .pagination-top .total{ 
   font-size: 2rem;
     color: #9e9191;
@@ -63,8 +65,10 @@
     font-size: 2rem;
 }
 .title{
-	    font-weight: bold;
+	   font-weight: bold;
     margin-left: 0.4rem;
+    position: relative;
+    top: -14px;
 }
 .list-group li {
   cursor: pointer;
@@ -78,7 +82,7 @@ a.disabled {
     text-decoration: underline;
 }
 a{
-  color: #0275d8 !important;
+  color: #f68e36 !important;
   cursor: pointer;
 }
 .fa-angle-up,.fa-angle-down,.fa-dot-circle-o{
@@ -149,5 +153,12 @@ a{
 }
 .list-vehicle .align-right{
   text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+  nav .nav-header .logo-wrap .logo-icon img{
+    margin-top: 2rem;
+  }
 }
    

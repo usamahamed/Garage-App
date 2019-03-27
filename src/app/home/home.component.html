@@ -4,7 +4,7 @@
     <div class="col-sm-3">
        <div class="card-search">
       <div class="search">
-        <i class="material-icons">search</i>
+        <i class="fa fa-search"></i>
         <input type="search" name="search"  [(ngModel)]="phrase">
       </div>
     </div>
@@ -39,11 +39,11 @@
 
             <div>
               <div class="pagination-top">
-                <sup class="from">{{this.dataService.currentPage}}</sup>
-                <sub class="to">{{this.dataService.noOfPages}}</sub> <span class="splitter">/</span>
-                <span class="total">{{10 || 0 }}</span> <span class="title">Vehicles</span>
-                <a  [class.disabled]="this.dataService.currentPage == 1"  ><i class="fa fa-angle-up" (click)="clickup()" aria-hidden="true"  ></i></a>
-                <a  [class.disabled]="this.dataService.currentPage == this.dataService.noOfPages" ><i class="fa fa-angle-down" (click)="clickdown()" aria-hidden="true"  ></i></a>
+                <sup class="from">{{dataService.currentPage}}</sup>
+                <sub class="to">{{dataService.noOfPages}}</sub> <span class="splitter">/</span>
+                <span class="total">{{dataService.vehiclesLength|| 0 }}</span> <span class="title">Vehicles</span>
+                <a  [class.disabled]="dataService.currentPage == 1"  ><i class="fa fa-angle-up" (click)="clickup()" aria-hidden="true"  ></i></a>
+                <a  [class.disabled]="dataService.currentPage == dataService.noOfPages" ><i class="fa fa-angle-down" (click)="clickdown()" aria-hidden="true"  ></i></a>
                 <a class="reset" title="reset"><i class="fa fa-dot-circle-o icon" (click)="removeFilter()" aria-hidden="true"></i></a>
               </div>
             </div>
@@ -70,7 +70,7 @@
          </li>
           
           <!-- <span>
-            <a href="#" (click)="removeFromParking1(vehicle)">Remove</a>
+            <a href="#" (click)="removeVehicle(vehicle)">Remove</a>
           </span> -->
         </ul>
 
@@ -80,14 +80,4 @@
 </div>
 
 
-<!-- <hr>
-Preview:
-<div class="row">
-  <div class="col-sm-6">Vehicles:
-    <pre>  {{ dataService.vehicles | json }} </pre>
-  </div>
-  <div class="col-sm-6">Levels:
-    <pre>  {{ dataService.levels | json }} </pre>
-  </div>
-</div> -->
 
