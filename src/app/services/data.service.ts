@@ -33,64 +33,43 @@ export class DataService {
 
 
   /**************************************************************************
-  * @desc getter all vehicles data
+  * @desc some getter for external use
   * @param null
-  * @return Array of Vehicle
+  * @return 
 *************************************************************************/
   get vehicles(): Array<Vehicle> {
     return this._vehicles;
   }
 
- /**************************************************************************
-  * @desc getter _currentPage
-  * @param null
-  * @return  _currentPage
-*************************************************************************/
+ /***********************************************************************/
   get currentPage(): number {
     return this._currentPage;
   }
 
-   /**************************************************************************
-  * @desc getter _noOfPages
-  * @param null
-  * @return  _noOfPages
-*************************************************************************/
+    /***********************************************************************/
+
   get noOfPages(): number {
     return this._noOfPages;
   }
+ /***********************************************************************/
 
-   /**************************************************************************
-  * @desc getter _maxSize
-  * @param null
-  * @return  _maxSize
-*************************************************************************/
   get maxSize(): number {
     return this._maxSize;
   }
+ /***********************************************************************/
 
- /**************************************************************************
-  * @desc getter all vehicles data but slicing based on page size
-  * @param null
-  * @return Array of Vehicle
-*************************************************************************/
   get slicevehicles(): Array<Vehicle> {
     return this.sliceVehicles;
   }
 
-/**************************************************************************
-  * @desc getter for levels data
-  * @param null
-  * @return Array of levels
-*************************************************************************/
+ /***********************************************************************/
+
   get levels(): Array<Level> {
     return this._levels;
   }
 
-   /**************************************************************************
-  * @desc getter all vehicles length
-  * @param null
-  * @return  Vehicle length
-*************************************************************************/
+   /***********************************************************************/
+
   get vehiclesLength(): number {
     return this._vehiclesLength;
   }
@@ -165,7 +144,7 @@ export class DataService {
   calculateAvailableSlots():void{
     for(let v = 0; v < this._vehicles.length; v++)
     {
-         this._levels.filter(data => data.id == this._vehicles[v].level)[0].availableSlots--;
+         this._levels.filter(data => data.id == this.sliceVehicles[v].level)[0].availableSlots--;
     }
   }
 
@@ -196,10 +175,11 @@ export class DataService {
   * @return void - remove vehicle from vehicles array
 *************************************************************************/
  removeFromParking(vehicle: Vehicle):void {
-    let index = this._vehicles.indexOf(vehicle, 0);
+    let index = this.sliceVehicles.indexOf(vehicle, 0);
     if (index > -1) {
       this.addSlot(vehicle.level);
-      this._vehicles.splice(index, 1);
+      this.sliceVehicles.splice(index, 1);
+    this._noOfPages = Math.ceil(this.sliceVehicles.length/this.entryLimit);
     }
   }
 

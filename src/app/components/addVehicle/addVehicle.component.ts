@@ -1,12 +1,17 @@
 import {Component} from '@angular/core';
 
-import {DataService} from "../services/data.service";
-import {Vehicle} from "../models/vehicle.model";
-import {Level} from "../models/level.model";
+import {DataService} from "../../services/data.service";
+import {Vehicle} from "../../models/vehicle.model";
+import {Level} from "../../models/level.model";
 
 @Component({
   selector: 'about',
   styles: [`
+  .btn-primary{
+        background-color: #f68e36;
+    border-color: #f68e36;
+}
+  }
   `],
   templateUrl: './addVehicle.component.html'
 
@@ -24,7 +29,7 @@ export class addVehicleComponent {
     this.error = false;
     this.info = null;
     if (this.validation()) {
-      this.dataService.vehicles.push(this.newVehicle);
+      this.dataService.sliceVehicles.push(this.newVehicle);
       this.dataService.reduseSlot(this.newVehicle.level);
       this.newVehicle = new Vehicle;
       this.info = "New vehicle found place on the parking";
@@ -42,8 +47,8 @@ export class addVehicleComponent {
   checkIfLicensePlatesExists(): boolean {
     var exists = false;
 
-    for (let index = 0; index < this.dataService.vehicles.length; index++) {
-      if (this.dataService.vehicles[index].licensePlate == this.newVehicle.licensePlate) {
+    for (let index = 0; index < this.dataService.sliceVehicles.length; index++) {
+      if (this.dataService.sliceVehicles[index].licensePlate == this.newVehicle.licensePlate) {
         exists = true;
         break;
       }

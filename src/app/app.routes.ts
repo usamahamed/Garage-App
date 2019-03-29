@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { addVehicleComponent } from './addVehicle/addVehicle.component';
-import { NoContentComponent } from './no-content/no-content.component';
+import { HomeComponent } from './components/home/home.component';
+import { addVehicleComponent } from './components/addVehicle/addVehicle.component';
+import { NoContentComponent } from './components/no-content/no-content.component';
 
 
 

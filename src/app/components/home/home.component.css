@@ -1,8 +1,8 @@
+/*Overide Bootstrap classes*/
 .list-group-item.active:hover {
-      background-color: #abb4bb !important;
-    border-color: #abb4bb !important;
+      background-color: #eeeeee !important;
+    border-color: #eeeeee !important;
 }
-
 .tag-default {
     background-color: #ad6542;
 }
@@ -76,15 +76,7 @@
     color: #ad6542;
     font-weight: bold;
 }
-a.disabled {
-    color: gray !important;
-    cursor: not-allowed !important;
-    text-decoration: underline;
-}
-a{
-  color: #f68e36 !important;
-  cursor: pointer;
-}
+
 .fa-angle-up,.fa-angle-down,.fa-dot-circle-o{
 	    font-size: 2.5rem;
     margin-left: 1rem;
@@ -154,7 +146,15 @@ a{
 .list-vehicle .align-right{
   text-align: right;
 }
-
+.trash{
+    position: relative;
+    top: -18px;
+    right: -26px;
+    margin: 0 -7px;
+}
+.trash a{
+  color:#ad6542 !important;
+}
 
 @media only screen and (max-width: 600px) {
   nav .nav-header .logo-wrap .logo-icon img{

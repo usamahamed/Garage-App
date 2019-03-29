@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+ 
+html, body{
+  margin: 0;
+  padding: 0;
+  color: #646360;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+/*  background-color: #eee;
+*/}
+span.active {
+  background-color: gray;
+}
+.ul-base {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a.disabled {
+    color: gray !important;
+    cursor: not-allowed !important;
+    text-decoration: underline;
+}
+a{
+  color: #f68e36 !important;
+  cursor: pointer;
+}

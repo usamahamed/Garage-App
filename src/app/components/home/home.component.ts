@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
-import {DataService} from "../services/data.service";
-import {Vehicle} from "../models/vehicle.model";
+import {DataService} from "../../services/data.service";
+import {Vehicle} from "../../models/vehicle.model";
 
 @Component({
   selector: 'home', 
@@ -51,5 +51,7 @@ export class HomeComponent {
    if(this.dataService.currentPage < this.dataService.noOfPages)
      this.dataService.selectPage(1);
   }
+
+ 
 
 }

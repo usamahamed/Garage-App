@@ -11,7 +11,7 @@
 
 <!--       <input type="text" [(ngModel)]="phrase">
  -->      <hr>
-      <h1 class="sample-content">Levels</h1>
+      <h1 class="sample-content"><i class="fa fa-level-up"></i> Levels</h1>
 
       <ul class="list-group">
         <li class="list-group-item" [ngClass]="level.id === selectedId ? 'active' : 'none'"  (click)="filterByLevel(level.id)"
@@ -22,7 +22,7 @@
 
       </ul>
       <hr>
-      <h1  class="sample-content">Type</h1>
+      <h1  class="sample-content"><i class="fa fa-car"></i> Type</h1>
 
       <ul class="list-group">
         <li class="list-group-item" [ngClass]="type === SelectedType ? 'active' : 'none'"
@@ -66,13 +66,13 @@
           </p>
           <p>
             Level: {{ vehicle.level}}
+             <span class="trash"><a href="#" (click)="removeVehicle(vehicle)"><i class="fa fa-trash"></i></a></span>
           </p>
          </li>
+           
           
-          <!-- <span>
-            <a href="#" (click)="removeVehicle(vehicle)">Remove</a>
-          </span> -->
         </ul>
+          
 
       </div>
     </div>

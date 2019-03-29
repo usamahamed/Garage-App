@@ -1,0 +1,42 @@
+<header class="header-wrapper">
+   
+    <input type="checkbox" id="m1" class="hidden-menu-ticker" >
+<label class="btn-menu" for="m1">
+  <span class="first"></span>
+  <span class="second"></span>
+  <span class="third"></span>
+</label> <span [routerLink]=" ['./'] " class="btn-menu_title"> Vehicles</span>
+
+
+
+
+
+<!-- nav -->
+<nav class="sidebar hidden-menu">
+  <div class="nav-header">
+    <div class="logo-wrap">
+      <a class="logo-icon" href="https://www.ysura.com/en/"><img alt="logo-icon" src="http://garage808.co.za/wp-content/uploads/2018/02/garage808-logo-small-padded10.png" width="40"></a>
+    </div>
+
+    <div class="nav-search">
+      <div class="search">
+        <i class="fa fa-search"></i>
+        <input type="search" name="search" placeholder="Search"  [(ngModel)]="phrase">
+      </div>
+    </div>
+  </div>
+  <ul class="nav-categories ul-base">
+   <li><a class="Menue_Link"  [routerLink]=" ['./'] "><i class="fa fa-th-list"></i>List vehicles</a></li>
+    <li><a class="Menue_Link"  [routerLink]=" ['./addVehicle'] "><i class="fa fa-plus"></i>Add vehicle</a></li> 
+  </ul>
+  <ul class="social ul-base">
+    <li><a href="#" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#" class="google-plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="#" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
+  </ul>
+  <div class="copyright">
+    <span>&copy; 2019 <a href="https://www.ysura.com/en/" class="link">ysura.com</a> ysura GmbH</span>
+    <span>Designed by <a href="usamahamed.tk" target="_blank">Usama Hamed</a></span>
+  </div>
+</nav><!-- @end nav -->
